@@ -1,12 +1,27 @@
 /* CONFIG */
-import {
-	config
-} from './../sync.config.json';
+import config from './../sync.config.json';
 
-export default (BrowserSync) => {
+/* Modules */
+import _ from 'lodash'
+import inquirer from 'inquirer';
+import fs from 'fs';
+import path from 'path';
+
+export default BrowserSync => {
+
 	return () => {
-		return BrowserSync({
-			proxy: 'https://boefje.myshopify.com',
+
+		let proxy = {};
+
+		config.targets.forEach(target => {
+			if(target.target_name === 'development') {
+				proxy.domain = target.primary_domain;
+				proxy.theme = target.theme_id;
+			}
+		});
+
+		const stream = BrowserSync({
+			proxy: `${proxy.domain}`,
 			files: ['./theme/assets/**'],
 			serveStatic: ['./theme/assets'],
 			https: true,
@@ -35,5 +50,7 @@ export default (BrowserSync) => {
 				}
 			]
 		})
-	};
+
+		return stream
+	}
 }
