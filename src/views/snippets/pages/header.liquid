@@ -1,0 +1,20 @@
+<div data-sticky="pages-menu" class="filter-sticky">
+    <div data-fixed class="filter__pages container-fluid d-block d-md-none">
+        <div class="row justify-content-center bg-smoke">
+            <div class="col-12 col-sm-11 py-3">
+                <div class="pages__menu">
+                    <button data-dropdown="pages" type="button" class="button__variants">
+                        <span>{{ page.title }}</span>
+                        <svg class="triangle-down">
+                            <use xlink:href="#triangle-down"></use>
+                        </svg>
+                        <svg class="triangle-up">
+                            <use xlink:href="#triangle-up"></use>
+                        </svg>
+                    </button>
+                    <div id="pages" class="list"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

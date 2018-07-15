@@ -1,0 +1,265 @@
+{% comment %}
+	Website :: Global Config
+{% endcomment %}
+<script>
+	var config = {
+		route: "{{ template | strip }}",
+		shop_currency: "{{ shop.currency }}",
+		money_format: "{{ shop.money_with_currency_format }}",
+		geoip: "http://geoip.nekudo.com/api",
+		currencies: "https://cdn.shopify.com/s/javascripts/currencies.js",
+		countries: "{{ shop.url }}/services/countries.js",
+		locale: {
+			"Austria": {
+				"continent": "Europe",
+				"code": "AT",
+				"currency": "EUR"
+			},
+			"Australia": {
+				"continent": "Asia Pacific",
+				"code": "AU",
+				"currency": "AUD"
+			},
+			"Argentina": {
+				"continent": "South America",
+				"code": "AR",
+				"currency": "ARS"
+			},
+			"Belgium": {
+				"continent": "Europe",
+				"code": "BG",
+				"currency": "EUR"
+			},
+			"Brazil": {
+				"continent": "South America",
+				"code": "BR",
+				"currency": "BRL"
+			},
+			"Canada": {
+				"continent": "North America",
+				"code": "CA",
+				"currency": "CAD"
+			},
+			"China": {
+				"continent": "Asia Pacific",
+				"code": "CN",
+				"currency": "CNY"
+			},
+			"Cyprus": {
+				"continent": "Europe",
+				"code": "CY",
+				"currency": "EUR"
+			},
+			"Czech Republic": {
+				"continent": "Europe",
+				"code": "CZ",
+				"currency": "CZK"
+			},
+			"Germany": {
+				"continent": "Europe",
+				"code": "DE",
+				"currency": "EUR"
+			},
+			"Denmark": {
+				"continent": "Scandinavia",
+				"code": "DK",
+				"currency": "DKK"
+			},
+			"Estonia": {
+				"continent": "Europe",
+				"code": "EE",
+				"currency": "EUR"
+			},
+			"Finland": {
+				"continent": "Scandinavia",
+				"code": "FI",
+				"currency": "EUR"
+			},
+			"France": {
+				"continent": "Europe",
+				"code": "FR",
+				"currency": "EUR"
+			},
+			"Greece": {
+				"continent": "Europe",
+				"code": "GR",
+				"currency": "EUR"
+			},
+			"Hong Kong": {
+				"continent": "Asia Pacific",
+				"code": "HK",
+				"currency": "HKD"
+			},
+			"India": {
+				"continent": "Asia Pacific",
+				"code": "IN",
+				"currency": "INR"
+			},
+			"Croatia": {
+				"continent": "Europe",
+				"code": "HR",
+				"currency": "EUR"
+			},
+			"Ireland": {
+				"continent": "Europe",
+				"code": "IE",
+				"currency": "EUR"
+			},
+			"Iceland": {
+				"continent": "Scandinavia",
+				"code": "IS",
+				"currency": "ISK"
+			},
+			"Italy": {
+				"continent": "Europe",
+				"code": "IT",
+				"currency": "EUR"
+			},
+			"Japan": {
+				"continent": "Asia Pacific",
+				"code": "JP",
+				"currency": "JPY"
+			},
+			"Jersey": {
+				"continent": "Europe",
+				"code": "JE",
+				"currency": "EUR"
+			},
+			"South Korea": {
+				"continent": "Asia Pacific",
+				"code": "SK",
+				"currency": "KRW"
+			},
+			"Liechtenstein": {
+				"continent": "Europe",
+				"code": "LI",
+				"currency": "CHF"
+			},
+			"Lithuania": {
+				"continent": "Europe",
+				"code": "LT",
+				"currency": "LTL"
+			},
+			"Luxembourg": {
+				"continent": "Europe",
+				"code": "LU",
+				"currency": "EUR"
+			},
+			"Latvia": {
+				"continent": "Europe",
+				"code": "LV",
+				"currency": "LVL",
+			},
+			"Malta": {
+				"continent": "Europe",
+				"code": "MT",
+				"currency": "EUR"
+			},
+			"Mexico": {
+				"continent": "South America",
+				"code": "MX",
+				"currency": "MXN"
+			},
+			"Monaco": {
+				"continent": "Europe",
+				"code": "MC",
+				"currency": "MXN"
+			},
+			"Netherlands": {
+				"continent": "Europe",
+				"code": "NL",
+				"currency": "EUR"
+			},
+			"Norway": {
+				"continent": "Scandinavia",
+				"code": "NO",
+				"currency": "NOK"
+			},
+			"New Zealand": {
+				"continent": "Asia Pacific",
+				"code": "NZ",
+				"currency": "NZD"
+			},
+			"Peru": {
+				"continent": "South America",
+				"code": "PE",
+				"currency": "SOL"
+			},
+			"Philippines": {
+				"continent": "Asia Pacific",
+				"code": "PH",
+				"currency": "PHP"
+			},
+			"Poland": {
+				"continent": "Europe",
+				"code": "PL",
+				"currency": "PLN"
+			},
+			"Portugal": {
+				"continent": "Europe",
+				"code": "PT",
+				"currency": "EUR"
+			},
+			"Russia": {
+				"continent": "Europe",
+				"code": "RU",
+				"currency": "RUB"
+			},
+			"Serbia": {
+				"continent": "Europe",
+				"code": "RS",
+				"currency": "RSD"
+			},
+			"Singapore": {
+				"continent": "Asia Pacific",
+				"code": "SG",
+				"currency": "SGD"
+			},
+			"Slovakia": {
+				"continent": "Europe",
+				"code": "SK",
+				"currency": "EUR"
+			},
+			"Spain": {
+				"continent": "Europe",
+				"code": "ES",
+				"currency": "EUR"
+			},
+			"Sweden": {
+				"continent": "Scandinavia",
+				"code": "SE",
+				"currency": "SEK"
+			},
+			"Switzerland": {
+				"continent": "Europe",
+				"code": "CH",
+				"currency": "CHF"
+			},
+			"Taiwan": {
+				"continent": "Asia Pacific",
+				"code": "TW",
+				"currency": "TWD"
+			},
+			"Ukraine": {
+				"continent": "Europe",
+				"code": "UA",
+				"currency": "UAH"
+			},
+			"United Arab Emirates": {
+				"continent": "Middle East",
+				"code": "AE",
+				"currency": "AED"
+			},
+			"United Kingdom": {
+				"continent": "Europe",
+				"code": "GB",
+				"currency": "GBP"
+			},
+			"United States": {
+				"continent": "North America",
+				"code": "US",
+				"currency": "USD"
+			}
+		}
+	}
+</script>

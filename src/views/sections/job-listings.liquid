@@ -1,0 +1,59 @@
+{% for block in section.blocks %}
+<div class="row no-gutter">
+  <div class="col-12 py-3">
+    <div class="careers__job">
+      <span class="title">{{ block.settings.title_text-box }}</span>
+      <span class="location">{{ block.settings.location_text-box }}</span>
+      <div class="row">
+        <div class="col-12 col-lg-8">
+          {{ block.settings.description_richtext }}
+        </div>
+        <div class="col-12 col-lg-4 align-self-center pb-3 pb-lg-0 text-lg-right">
+          <a class="apply" href="mailto:jobs@brixtoltextiles.com?subject=Applicant for {{block.settings.title_text-box}}">
+            Apply for position
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endfor %}
+
+{% schema %}
+{
+  "name": "Job Listings",
+  "max_blocks": 10,
+  "settings": [{
+    "id": "header_text-box",
+    "type": "text",
+    "label": "Heading",
+    "default": "Current Listings"
+  }],
+  "blocks": [{
+    "name": "Job",
+    "type": "select",
+    "settings": [{
+      "id": "title_text-box",
+      "type": "text",
+      "label": "Job Title"
+    },
+    {
+      "id": "location_text-box",
+      "type": "text",
+      "label": "Location"
+    },
+    {
+      "id": "description_richtext",
+      "type": "richtext",
+      "label": "Job description"
+    }]
+  }],
+  "presets": []
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

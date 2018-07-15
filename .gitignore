@@ -1,0 +1,10 @@
+/node_modules
+/.DS_Store
+/yarn.lock
+/yarn-error.log
+/.vscode
+/.strignore
+/build/ssl/localhost.crt
+/build/ssl/localhost.key
+/sync.config.json
+/theme

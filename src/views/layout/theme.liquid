@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <title>
+    {{ page_title }}
+    {% if current_tags %}
+    {% assign meta_tags = current_tags | join: ', ' %} &ndash; {{ 'general.meta.tags' | t: tags: meta_tags }}
+    {% endif %}
+    {% if current_page != 1 %}
+    &ndash; {{ 'general.meta.page' | t: page: current_page }}
+    {% endif %}
+    {% unless page_title contains shop.name %}
+    &ndash; {{ shop.name }}
+    {% endunless %}
+  </title>
+
+  {% comment %}
+    Meta Tags :: Descriptives / SEO and OG
+  {% endcomment %}
+  {% if page_description %}
+    <meta name="description" content="{{ page_description | escape }}">
+    <meta property="og:description" content="{{ page_description | escape }}">
+  {% endif %}
+
+  {% comment %}
+    OG Meta :: Sub-links meta
+  {% endcomment %}
+  {%- if template contains 'product' -%}
+    <meta property="og:type" content="product">
+    <meta property="og:title" content="{{ product.title | strip_html | escape }}">
+    {% for image in product.images reversed limit:3 %}
+      <meta property="og:image" content="http:{{ image | img_url: 'grande' }}">
+      <meta property="og:image:secure_url" content="https:{{ image | img_url: 'grande' }}">
+    {% endfor %}
+    <meta property="og:price:amount" content="{{ product.price | money_without_currency | strip_html | escape }}">
+    <meta property="og:price:currency" content="{{ shop.currency }}">
+  {%- else -%}
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ page_title | escape }}">
+    <meta property="og:image" content="http:{{ 'logo.png' | asset_url }}">
+    <meta property="og:image:secure_url" content="https:{{ 'logo.png' | asset_url }}">
+    <meta property="og:url" content="boefje.myshopify.com">
+    <meta property="og:site_name" content="Boefje">
+  {%- endif -%}
+
+  {% comment %}
+    Favicons :: Modern Supported Browser & Device Favicons
+  {% endcomment %}
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ 'apple-touch-icon.png' | asset_url }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ 'favicon-32x32.png' | asset_url }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ 'favicon-16x16.png' | asset_url }}">
+  <link rel="mask-icon" href="{{ 'safari-pinned-tab.svg' | asset_url }}" color="#3b3b3b">
+  <link rel="shortcut icon" href="{{ 'favicon.ico' | asset_url }}}">
+
+  {% comment %}
+    Mobile :: Responsive Optimizations
+  {% endcomment %}
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="MobileOptimized" content="320">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="{{ shop.name }}">
+  <meta name="application-name" content="{{ shop.name }}">
+
+  {% comment %}
+    Google :: Required Specs
+  {% endcomment %}
+  <meta name="google-site-verification" content="#">
+  <meta name="google" content="notranslate">
+
+  {% comment %}
+    Stylesheet :: Design
+  {% endcomment %}
+  {{ 'stylesheet.css' | asset_url | stylesheet_tag }}
+
+  {% comment %}
+    Liquid :: Routing & Site Configuration
+  {%- include 'components.config' -%}
+  {% endcomment %}
+
+  {% comment %}
+    Shopify :: Dependency Fuckery
+  {% endcomment %}
+  {{ content_for_header }}
+
+  {% comment %}
+    Shopify :: Customer Components
+  {% endcomment %}
+  {% if template contains 'customers' %}
+  <script src="{{ 'shopify_common.js' | shopify_asset_url }}" defer></script>
+  <script src="{{ 'customer_area.js' | shopify_asset_url }}" defer></script>
+  {% endif %}
+
+  {% comment %}
+    Shopify :: Option Selection
+  {% endcomment %}
+  <script src="{{ 'option_selection.js' | shopify_asset_url }}" defer></script>
+
+  {% comment %}
+    JavaScript :: Main Scripts
+  {% endcomment %}
+  <script src="{{ 'bundle.js' | asset_url }}" defer></script>
+</head>
+
+<body id="template_{{ template | strip }}" class="template_{{ template | strip }}" itemtype="http://schema.org/WebPage" itemscope>
+
+  {% comment %}
+    Icons :: SVG Sprite
+  {% endcomment %}
+
+  {% comment %}
+    Desktop :: Container
+  {% endcomment %}
+  <div id="container" class="container-fluid">
+    <header role="banner" itemscope itemtype="http://schema.org/WPHeader">
+      {%- include 'layout.navigation' -%}
+    </header>
+    <main role="main" itemscope itemprop="mainContentOfPage">
+      {{ content_for_layout }}
+    </main>
+    <footer itemscope itemtype="http://schema.org/WPFooter">
+      {%- include 'layout.footer' -%}
+    </footer>
+  </div>
+</body>
+</html>

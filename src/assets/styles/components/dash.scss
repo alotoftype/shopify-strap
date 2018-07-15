@@ -1,0 +1,29 @@
+// Dash Menu
+//
+// Inline list menu, with dash seperator, e.g:  one | two | three
+
+$dash-space: 10px;
+
+.dash {
+   width: 100%;
+   list-style-type: none;
+   padding: 0;
+
+   li {
+      display: inline;
+      padding: 0;
+
+      &:after {
+         content: "|";
+         margin-left: $dash-space;
+         margin-right: $dash-space;
+      }
+
+      &:last-child:after {
+         content: '';
+         margin-left:0;
+         margin-right: 0;
+      }
+
+   }
+}
