@@ -35,13 +35,13 @@ Download or clone the repository and run `yarn` or `npm install` from the projec
 ## Setup
 Strap assumes you have some basic knoweldge of theme development with Shopify. Please ensure you've set everything up correctly before you begin building with the Strap and follow the build-flow when developing.
 
-<h4>Upload Theme to Shopify</h4>
+### Upload Theme to Shopify
 Before you get started you will need to add a new theme to your store and upload the `theme.zip` file located in the root directory.
 
-<h4>Setup Shopify Sync</h4>
+### Setup Shopify Sync
 Shopify Sync allows you to upload files to your Shopify store/s. You will need to connect your stores theme/s before you begin building with the Strap, You've got 2 options here.
 
-<br>**Option 1** <br>
+#### Option 1
 You can use the Sync wizard from the command line by running:
 
 ```
@@ -52,7 +52,7 @@ The Sync wizard will generate a `sync.config.json` file will the information you
 
 > The [Shopify Sync](https://github.com/panoply/shopify-sync) module is a stripped down version of [Quickshot](https://github.com/internalfx/quickshot) using different naming conventions and has little less flavor.
 
-**Option 2** <br>
+#### Option 2**
 You can also add a `sync.config.json` file to the root directory and include your information in the file. Below is an example of what the wizard generates and what you can enter manually:
 
 ```
@@ -72,10 +72,11 @@ You can also add a `sync.config.json` file to the root directory and include you
 }
 ```
 
+
 > The `targets` key accepts an array which allows you to add multiple theme from multiple store domains.
 
 
-<h4>3. Setup SSL in Development</h4>
+### Setup SSL in Development
 It's reccomended you add your own SSL certificate before running the strap. This will help with live reloading when in development. You can generate an SSL certificate with `openssl` using the below command:
 
 ```
@@ -124,6 +125,8 @@ The theme design shipped within this scaffold is built ontop of the [Bootstrap 4
 ## JavaScript
 Theme strap enables you to write JavaScript in ES6 which is transpiled down to ES5 using [Rollup.js](https://github.com/rollup/rollup). Due to Shopify's required `.liquid` static templates the theme implements [Mithril.js](https://mithril.js.org/) and [Turbolinks 5](https://github.com/turbolinks/turbolinks) which act in unity resulting in PWA like experience for our users.
 
+**The exported JavaScript file is named `bundle.js` which at this time should be kept under this name. Future releases will enable custom naming of assets.**
+
 > The cart and locale components are both built with mithril.js
 
 
@@ -144,6 +147,8 @@ Theme strap enables you to write JavaScript in ES6 which is transpiled down to E
 
 ## Styling
 The themes stylesheet is written in either `SASS` or `SCSS` and implement the [Bootstrap 4](http://getbootstrap.com/) framework components.
+
+**The stylesheet is named `stylesheet.css` which at this time should be kept under this name. Future releases will enable custom naming of assets.**
 
 > Please note that the theme does NOT implement Bootstraps jQuery components
 
