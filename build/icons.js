@@ -23,17 +23,20 @@ export default (gulp, plugins, mode) => {
     gulp
       .src(config.icons.src)
       .pipe(svgSprite(svgConfig))
-
       .pipe(mode.development(
 				plugins.print.default(filename => {
-					return colors['magenta'](colors.bold(`◻️  Icons Compiled`))
+					return colors['magenta'](colors.bold(`🎀  Icons Compiled`))
 				})
 			))
 			.pipe(mode.production(
 				plugins.print.default(filename => {
-					return colors['yellow'](`◻️  icons:`) + colors['magenta'](` ${filename}`)
+					return colors['yellow'](`🎀  icons:`) + colors['magenta'](` ${filename}`)
 				})
-			))
+      ))
+      .pipe(plugins.size({
+				title: `🎀 `,
+				gzip: false,
+			}))
       .pipe(gulp.dest('.'));
   };
 }
