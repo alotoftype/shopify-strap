@@ -1,4 +1,18 @@
 
+**This project is still a work in progress. The development environment is working and you can start developing your theme accordingly but the theme design is not yet implemented**
+
+### TODO
+
+- Develop the Bootstrap 4 Theme layouts
+- Develop the ES6 JavaScript Boilerplates & standard components
+- Implement working Ajax Cart components
+
+We currently use the Strap in production on [BRIXTOL TEXTILES](https://github.com/BRIXTOL/shopify-theme). Might be worth browsing the repo to see how the strap working on a live theme.
+
+> Please note the the BRIXTOL TEXTILES theme is not an open source project. If you pull or clone that repo the legal team will be on your back, so tred lightly.
+
+<hr>
+
 # SHOPIFY STRAP
 
  An opinionated development environment scaffold for building Shopify themes. This theme and development environment implements a modern approach to developing shopify themes by implementing and harnessing various node modules resulting in blazing fast builds.
