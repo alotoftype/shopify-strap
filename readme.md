@@ -135,9 +135,9 @@ The layout directory contains layout files. Brixtol uses only one layout, which 
 The sections directory contains the theme sections. Brixtol does not really apply many theme sections to its design due to the multiple storefronts required. The views in this directory will build into `theme/sections` directory
 
 #### Snippets
-The snippets directory contains multiple directories that are relative to a template of the same name. The snippet files upon build and export are prefixed with the relative directory name they are located in. Which means these snippets are to be included with a dot prefix.
+The snippets directory contains multiple directories that are relative to a template of the same name. The snippet files upon build and export are prefixed with the relative directory name they are located in. Which means these snippets are to be included with a dot prefix, for example:
 
-For example, The `collection` snippet directory with export each file with a name prefix like `collection.filename.liquid` into the `theme/snippets` directory. This export requires you to include that snippet as `collection.filename` within the template you will require it inside of.
+Lets say you were to create a snippet in the `snippets/collection` directory with the name `filename`. This snippet would then export to `theme/snippets` with the directory name prefixed to the file. This means any snippet file would be included as `{% include 'collection.filename '%}` in your template.
 
 #### Templates
 The Templates directory contains the themes main templates. These views are exported to `theme/templates` directory. Majority of the Template views include multiple snippets.
