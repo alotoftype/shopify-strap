@@ -17,6 +17,8 @@ We currently use the Strap in production on [BRIXTOL TEXTILES](https://github.co
 
  An opinionated development environment scaffold for building Shopify themes. This theme and development environment implements a modern approach to developing shopify themes by implementing and harnessing various node modules resulting in blazing fast builds.
 
+ > The Strap is intended for more complex Shopify theme builds. If you're still a junior developer and/or think jQuery is cool then it's best you go and use something like [Slate](https://github.com/Shopify/slate) like the rest of the tech-tards. No offence.
+
 ## Features
 
 - Live Reloading of assets and templates in local development.
@@ -33,19 +35,47 @@ Download or clone the repository and run `yarn` or `npm install` from the projec
 ## Setup
 Strap assumes you have some basic knoweldge of theme development with Shopify. Please ensure you've set everything up correctly before you begin building with the Strap and follow the build-flow when developing.
 
-<h4>Upload Themes to Shopify</h4>
+<h4>Upload Theme to Shopify</h4>
 Before you get started you will need to add a new theme to your store and upload the `theme.zip` file located in the root directory.
 
 <h4>Setup Shopify Sync</h4>
-Shopify Sync allows you to upload files to your Shopify store/s. You will need to connect your stores theme/s before you begin building with the Strap. Simply add your store and theme/s information to the `sync.config.json` or use the Sync wizard from the command line by running:
+Shopify Sync allows you to upload files to your Shopify store/s. You will need to connect your stores theme/s before you begin building with the Strap, You've got 2 options here.
+
+**Option 1** <br>
+You can use the Sync wizard from the command line by running:
 
 ```
 yarn sync configure
 ```
 
+The Sync wizard will generate a `sync.config.json` file will the information you enter and the Strap will use this information in development.
+
 > The [Shopify Sync](https://github.com/panoply/shopify-sync) module is a stripped down version of [Quickshot](https://github.com/internalfx/quickshot) using different naming conventions and has little less flavor.
 
-<h4>Setup SSL in Development</h4>
+**Option 2** <br>
+You can also add a `sync.config.json` file to the root directory and include your information in the file. Below is an example of what the wizard generates and what you can enter manually:
+
+```
+{
+   "concurrency": 20,
+   "ignore_file": ".strignore",
+   "targets": [{
+      "target_name": "development",
+      "api_key": "abcdefg123456",
+      "password": "abcdefg123456",
+      "domain": "myshopify-domain",
+      "primary_domain": "https://www.storedomain.com",
+      "theme_name": "development",
+      "theme_id": 12345678
+    }],
+   "configVersion": 1
+}
+```
+
+> The `targets` key accepts an array which allows you to add multiple theme from multiple store domains.
+
+
+<h4>3. Setup SSL in Development</h4>
 It's reccomended you add your own SSL certificate before running the strap. This will help with live reloading when in development. You can generate an SSL certificate with `openssl` using the below command:
 
 ```
@@ -70,7 +100,7 @@ Development related jobs are run through various gulp tasks. All relative paths 
 JavaScript files are all bundled using Rollup. Rollup is a powerful bundler and allows the theme to leverage ES6 transpliation with Buble which is a faster transpiler than Babel.
 
 <h4>Browser Sync</h4>
-Live Reload your changes to assets and templates using Browser Sync. In development mode the Strap will proxy your theme and live reload changes in localhost.
+Live Reload your changes to assets and templates using Browser Sync. In development mode the Strap will proxy your theme and live reload changes in localhost. By default Browser Sync will start a development server at `localhost:3000` but the CLI will log this anyway.
 
 <h4>Shopify Sync</h4>
 Sync changes to your stores using Shopify Sync. The sync uses a command line interface for easy configuration of theme targets. You can upload to multiple stores with Shopify Sync which makes multi-store theme development a breeze.
