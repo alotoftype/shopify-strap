@@ -96,10 +96,6 @@ Theme strap enables you to write JavaScript in ES6 which is transpiled down to E
 
 > The cart and locale components are both built with mithril.js
 
-|File size| Type |
-|--|--|
-| `<~ 60kb ` |Gzipped |
-| `<~ 200kb` | Minified |
 
 <h4>Included Dependecies</h4>
 
@@ -121,11 +117,6 @@ The themes stylesheet is written in either `SASS` or `SCSS` and implement the [B
 
 > Please note that the theme does NOT implement Bootstraps jQuery components
 
-|File size| Type |
-|--|--|
-| `<~ 25kb ` |Gzipped |
-| `<~ 160kb` | Minified |
-
 
 ## Icons
 The theme uses an imported SVG icon sprite and custom `height` and `width` sizing is added in the stylesheets for each icon nested in each element. While this has some extra code requirements it enables more custom control of each icon. The icon SVG sprite is exported as a snippet and called within the `theme` layout view file.
@@ -134,21 +125,21 @@ The theme uses an imported SVG icon sprite and custom `height` and `width` sizin
 ## Views
 Views are the static `.liquid` files required by Shopify. View files are exported to the main `theme` directory in a minified format from the `src` directory. View files within the `/src` directory follow a vastly different build pattern to that of the Shopify `theme` directory. Below is some additional information on these directories:
 
-<h4>Customers</h4>
+#### Customers
 The customers directory contains all account and/or customer related views within in it. The views in this directory will build into `theme/templates/cutomers` directory.
 
-<h4>Layout</h4>
+#### Layout
 The layout directory contains layout files. Brixtol uses only one layout, which is `theme` however more can be added. The view/s in this directory will build into `theme/layout` directory.
 
-<h4>Sections</h4>
+#### Sections
 The sections directory contains the theme sections. Brixtol does not really apply many theme sections to its design due to the multiple storefronts required. The views in this directory will build into `theme/sections` directory
 
-<h4>Snippets</h4>
+#### Snippets
 The snippets directory contains multiple directories that are relative to a template of the same name. The snippet files upon build and export are prefixed with the relative directory name they are located in. Which means these snippets are to be included with a dot prefix.
 
 For example, The `collection` snippet directory with export each file with a name prefix like `collection.filename.liquid` into the `theme/snippets` directory. This export requires you to include that snippet as `collection.filename` within the template you will require it inside of.
 
-<h4>Templates</h4>
+#### Templates
 The Templates directory contains the themes main templates. These views are exported to `theme/templates` directory. Majority of the Template views include multiple snippets.
 
 <hr>
