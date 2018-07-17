@@ -16,7 +16,6 @@ export default BrowserSync => {
 		config.targets.forEach(target => {
 			if(target.target_name === 'development') {
 				proxy.domain = target.primary_domain;
-				proxy.theme = target.theme_id;
 			}
 		});
 

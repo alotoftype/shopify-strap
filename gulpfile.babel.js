@@ -18,7 +18,7 @@ import images from './build/images';
 import icons from './build/icons';
 import zip from './build/zip';
 import clean from './build/clean';
-import serve from './build/serve';
+import server from './build/server';
 
 /* PROCESS */
 const mode = require('gulp-mode')({
@@ -41,7 +41,7 @@ gulp.task('sections', views(gulp, plugins(), mode, 'sections'));
 gulp.task('layout', views(gulp, plugins(), mode, 'layout'));
 gulp.task('clean', clean(mode));
 gulp.task('zip', zip(gulp, plugins()));
-gulp.task('serve', serve(bs));
+gulp.task('server', server(bs));
 ``
 
 /* VIEWS TASK */
@@ -93,4 +93,4 @@ gulp.task('production', sequence(
 ))
 
 /* DEFAULT TASK */
-gulp.task('default', ['watch', 'serve']);
+gulp.task('default', ['watch', 'server']);
