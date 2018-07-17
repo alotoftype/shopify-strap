@@ -41,7 +41,7 @@ Before you get started you will need to add a new theme to your store and upload
 <h4>Setup Shopify Sync</h4>
 Shopify Sync allows you to upload files to your Shopify store/s. You will need to connect your stores theme/s before you begin building with the Strap, You've got 2 options here.
 
-**Option 1** <br>
+<br>**Option 1** <br>
 You can use the Sync wizard from the command line by running:
 
 ```
