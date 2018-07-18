@@ -16,11 +16,12 @@ export default BrowserSync => {
 		config.targets.forEach(target => {
 			if(target.target_name === 'development') {
 				proxy.domain = target.primary_domain;
+				proxy.theme = target.theme_id;
 			}
 		});
 
-		const stream = BrowserSync({
-			proxy: `${proxy.domain}`,
+		return  BrowserSync({
+			proxy: `${proxy.domain}/?preview_theme_id=${proxy.theme}`,
 			files: ['./theme/assets/**'],
 			serveStatic: ['./theme/assets'],
 			https: true,
