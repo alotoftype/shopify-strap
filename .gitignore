@@ -1,10 +1,58 @@
-/node_modules
-/.DS_Store
-/yarn.lock
-/yarn-error.log
-/.vscode
-/.strignore
-/build/ssl/localhost.crt
-/build/ssl/localhost.key
-/sync.config.json
-/theme
+# Node
+.node_modules
+node_modules
+*/node_modules
+/node_modules/*
+
+# OS X Files
+.DS_Store
+.DS_Store?
+.Spotlight-V100
+.Trashes
+Icon?
+Thumbs.db
+ehthumbs.db
+._*
+*.swp
+*.swo
+*.lnk
+*~
+
+# IDE FIles
+.vscode
+.strignore
+
+# Yarn 
+yarn.lock
+yarn-error.log
+
+# Logs and databases #
+######################
+*.log
+*.log.*
+log
+log/**/*
+*.sql
+*.sqlite
+
+# Misc 
+.*cache
+cache/*
+backup
+_files
+.monitor
+Forwardfile
+
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+
+
+build/ssl/localhost.crt
+build/ssl/localhost.key
+sync.config.json
+theme
