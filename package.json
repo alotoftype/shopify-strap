@@ -46,7 +46,6 @@
   },
   "dependencies": {
     "accounting": "^0.4.1",
-    "bootstrap": "^4.1.1",
     "currency-symbol-map": "^4.0.4",
     "loadjs": "^3.5.4",
     "microtip": "^0.2.2",

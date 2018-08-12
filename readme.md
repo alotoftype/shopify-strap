@@ -3,7 +3,7 @@
 
 ### TODO
 
-- Develop the Bootstrap 4 Theme layouts
+- ~~Develop the Bootstrap 4 Theme layouts~~
 - Develop the ES6 JavaScript Boilerplates & standard components
 - Implement working Ajax Cart components
 
@@ -25,7 +25,7 @@ We currently use the Strap in production on [BRIXTOL TEXTILES](https://github.co
 - Supports ES6 to ES5 Transpilation.
 - Supports SCSS/SASS to CSS and custom autoprefixing.
 - Uploads concurrently to multiple stores.
-- Bootstrap 4 Grid Framework.
+- ~~Bootstrap 4 Grid Framework.~~
 - Various Vanilla JavaScript Components (no jQuery).
 
 
