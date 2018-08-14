@@ -1,0 +1,39 @@
+  .homepage-featured__products {
+        margin: .6em 0;
+        @include until($desktop) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: .6em;
+        }
+        @include desktop{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 1.2em;
+        }
+      & .homepage-featured__product {
+          @extend .column;
+          display:flex;
+          justify-content: center;
+
+      image {
+          width: 100%;
+      }
+      }
+      .featured__product-info {
+          display: flex;
+          justify-content: space-between;
+      }
+    }
+
+    .homepage-featured__second-products{
+        @extend .columns;
+        padding: .6em 0;
+        .homepage-featured__second-product {
+        @extend .column;
+
+        .featured__product-info {
+            display: flex;
+            justify-content: space-between;
+        }
+        }
+    }

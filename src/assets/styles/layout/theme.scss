@@ -1,0 +1,44 @@
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  @include until ($desktop){
+    overflow-x: hidden;
+  }
+}
+
+body {
+  font-size: 62.5%;
+  font-family: $sofia;
+  font-weight: 300;
+  color: $body-color;
+
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: $frank;
+}
+
+.sticky {
+  position: fixed !important;
+  top: 0 !important;
+  margin-top: 0 !important;
+  width: 100%;
+  max-width: 1440px;
+  background: #fff;
+  z-index: 10;
+}
+
+#container {
+  font-size: 1.6em;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+main {
+  margin: 1.2em 3.2em;
+  @include until ($desktop) {
+    margin: .6em;
+    width: 95%;
+  }
+}

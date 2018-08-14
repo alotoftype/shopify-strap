@@ -1,0 +1,78 @@
+ .homepage-newsletter {
+        @extend .columns;
+        min-height: 34.6em;
+        background: skyblue;
+        margin: .6em 0;
+
+        .homepage-newsletter-message,
+        .homepage-newsletter-form {
+            @extend .column;
+        }
+        .homepage-newsletter-message {
+            @extend .is-multiline;
+            padding: 3.2em;
+            @include until ($desktop) {
+                padding: .6em;
+            }
+            h2{
+                font-size: 4.6em;
+                line-height: 1;
+                font-weight: bold;
+                @include until ($desktop){
+                    padding-top: 1.2em;
+                    font-size: 2.4em;
+                    text-align: center;
+                    margin-bottom: .6em;
+                }
+            }
+            .subtitle {
+                display: block;
+                @include until ($desktop){
+                    font-size: 1em;
+                    padding: 0 .6em;
+                    text-align: center;
+                }
+            }
+        }
+        .homepage-newsletter-form {
+            display: flex;
+            align-content: center;
+            form {
+                @include until ($desktop){
+                    margin: 1.2em;
+                    width: 100%;
+                }
+                display: block;
+                width: 60%;
+                margin: 5em auto;
+                div {
+                    @extend .field;
+                    input {
+                        width: 100%;
+                        height: 3.2em;
+                        background: none;
+                        border: none;
+                        border-bottom: 2px solid $blue;
+
+                    }
+                }
+                .submit-button {
+                    @include desktop {
+                        padding: .5em 1.2em;
+                        margin-top: 2.4em;
+                    }
+                    color: #fff;
+                    background: $blue;
+                    border-radius: 4em;
+                    display: block;
+                    font-size: 1.8em;
+
+                    width: 60%;
+                    margin: 0 auto;
+                    margin-top: .6em;
+                    text-align: center;
+
+                }
+            }
+        }
+    }

@@ -1,0 +1,25 @@
+
+    .homepage-featured__content {
+        @extend .columns;
+
+        .homepage-featured__content-message{
+            @extend .column;
+            text-align: center;
+            p {
+              @include until ($desktop){
+                  margin: 2.4em .6em;
+              }
+               margin: 2.4em 4.8em;
+            }
+        }
+        a.button {
+            border: none;
+            background: none;
+            border-bottom: 2px solid $blue;
+            border-radius: 0;
+          }
+          a.button::after {
+            padding-left: .3em;
+            content: " →"
+          }
+    }

@@ -1,7 +1,8 @@
 /* Components */
+import 'components/nav';
 import App from 'components/app';
 //import Locale from 'components/locale';
-//import AjaxCart from 'components/ajax-cart';
+import AjaxCart from 'components/ajax-cart';
 import Dropdown from 'components/dropdown';
 
 /* Templates */

@@ -12,6 +12,7 @@ import bs from 'browser-sync';
 /* TASKS */
 import scripts from './build/scripts';
 import styles from './build/styles';
+import fonts from './build/fonts';
 import json from './build/json';
 import views from './build/views';
 import images from './build/images';
@@ -24,11 +25,12 @@ import server from './build/server';
 const mode = require('gulp-mode')({
 	modes: ['production', 'development'],
 	default: 'development',
-	verbose: false
+	verbose: true
 });
 
 /* THEME DEVELOPMENT */
 gulp.task('scripts', scripts(gulp, 'bundle', mode, bs));
+gulp.task('fonts', fonts(gulp, plugins(), mode, bs));
 gulp.task('images', images(gulp, plugins(), mode));
 gulp.task('icons', icons(gulp, plugins(), mode));
 gulp.task('locales', json(gulp, plugins(), mode, 'locales'));
@@ -58,6 +60,7 @@ gulp.task('watch', () => {
 	gulp.watch(config.icons.watch, ['icons']).on('change', bs.reload);
 	gulp.watch(config.json.locales.watch, ['locales']);
 	gulp.watch(config.json.config.watch, ['config']);
+	gulp.watch(config.fonts.watch,['fonts']);
 	gulp.watch(config.images.watch, ['images']).on('change', bs.reload);
 	gulp.watch(config.styles.watch, ['styles']);
 	gulp.watch(config.scripts.bundle.watch, ['scripts']);
@@ -70,6 +73,7 @@ gulp.task('watch', () => {
 
 /* BUILD TASK */
 gulp.task('build', sequence(
+	'fonts',
 	'clean',
 	'views',
 	'locales',
@@ -77,12 +81,18 @@ gulp.task('build', sequence(
 	'styles',
 	'scripts',
 	'icons',
-	'images'
+	 'images'
+	
 ));
+gulp.task('builder', sequence('build',(e)=>{
+	if(e) console.log(e);
+}))
+
 
 /* PRODUCTION TASK */
 gulp.task('production', sequence(
 	'clean',
+	'fonts',
 	'views',
 	'locales',
 	'config',
@@ -92,5 +102,30 @@ gulp.task('production', sequence(
 	'images'
 ))
 
+function theError(e) {
+	if(e) {
+		console.log(e)
+	}
+} 
+gulp.task('produce', (theError)=>{
+	try {sequence([
+		'clean',
+	'fonts'],
+	[
+	'views'],
+	[
+	'locales',
+	'config'],
+	'styles',
+	'scripts',
+	'icons',
+	'images'
+	)(theError)
+
+	}
+	catch(e){
+		console.log(e);
+	}
+})
 /* DEFAULT TASK */
 gulp.task('default', ['watch', 'server']);

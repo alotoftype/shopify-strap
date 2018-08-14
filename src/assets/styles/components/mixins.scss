@@ -6,7 +6,6 @@
 
   &::before{
     display: block;
-    background-color: $ghost;
     content: "";
     width: 100%;
     padding-top: ($height / $width) * 100%;

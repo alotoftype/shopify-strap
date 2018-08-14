@@ -130,7 +130,7 @@ Theme strap enables you to write JavaScript in ES6 which is transpiled down to E
 > The cart and locale components are both built with mithril.js
 
 
-<h4>Included Dependecies</h4>
+<h4>Included Dependencies</h4>
 
 - Turbolinks 5
 - Mithril (SPA Framework)

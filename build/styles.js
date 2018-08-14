@@ -35,6 +35,8 @@ export default function (gulp, plugins, mode, sync) {
 				})
 			))
 			.pipe(plugins.rename('stylesheet.css'))
+			.pipe(plugins.replace('"{{', '{{'))
+			.pipe(plugins.replace('}}"', '}}'))
 			.pipe(mode.development(
 				plugins.print.default(() => {
 					return colors['magenta'](colors.bold(`💈 Stylesheet Compiled`))

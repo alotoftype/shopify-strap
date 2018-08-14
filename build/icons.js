@@ -35,7 +35,7 @@ export default (gulp, plugins, mode) => {
       ))
       .pipe(plugins.size({
 				title: `🎀 `,
-				gzip: false,
+				gzip: true,
 			}))
       .pipe(gulp.dest('.'));
   };

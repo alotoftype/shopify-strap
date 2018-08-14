@@ -1,0 +1,38 @@
+#search {
+  @media screen  and (max-width: $desktop){
+    display: none;
+  }
+  position: relative;
+  height: 7em;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: $blue;
+  z-index: 0;
+  width: 100%;
+  margin: 0 auto;
+
+ .content {
+  width: 80%;
+  margin: 0 auto;
+
+  input {
+    width: 80%;
+    height: 3.24em;
+    margin: 2rem auto;
+    padding: .5em;
+    border: 1px solid #4d4d4d;
+    border-right:none;
+  }
+  button {
+    @extend .button;
+   // @extend .is-small;
+    margin: 2rem auto;
+    border-radius: 0;
+    margin-left: -.5em;
+    border: 1px solid #4d4d4d;
+    border-left: none;
+    background: $primary;
+  }
+}
+}

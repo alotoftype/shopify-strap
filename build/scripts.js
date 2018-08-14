@@ -24,7 +24,7 @@ export default function (gulp, file, mode, sync) {
 		const stream = rollup({
 			input: config.scripts[file].base + config.scripts[file].input,
 			format: config.scripts[file].format,
-			sourcemap: false,
+			sourcemap: true,
 			name: config.scripts[file].name,
 			cache: cache,
 			plugins: [
@@ -35,7 +35,7 @@ export default function (gulp, file, mode, sync) {
 					extensions: ['.js']
 				}),
 				buble(),
-				mode.production(uglifyJs()),
+				//mode.production(uglifyJs()),
 				fileSize()
 			]
 		})

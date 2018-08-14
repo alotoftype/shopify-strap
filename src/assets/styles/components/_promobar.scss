@@ -1,0 +1,27 @@
+#promo_banner {
+  @extend .columns;
+  width: 90%;
+  min-height: 1em;
+  margin: 1.2em;
+  color: green;
+  justify-content: center;
+
+  .promo_banner_content{
+     @extend .column;
+     padding: 0;
+     width: 60%;
+     margin: 0 auto;
+     text-align: center;
+     @include desktop {
+       font-size: 1.2em;
+
+     }
+     @include until($desktop){
+       font-size:.9em;
+     }
+
+
+
+
+  }
+}

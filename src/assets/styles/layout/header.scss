@@ -1,0 +1,60 @@
+.headerTop {
+  @include desktop {
+    position: relative;
+    top: 4em;
+    margin-top: -4em;
+  }
+}
+
+.header_top {
+  background: green;
+  @include desktop {
+  height: 45em;
+  }
+@include until($desktop){
+  height: 20em;
+}
+
+
+
+}
+.main_message {
+  @extend .columns;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
+  @include desktop {
+    position: absolute;
+    margin: 2.4em auto;
+    width: 60%;
+    top: 20vh;
+    text-align: center;
+    left: 25vw;
+    padding: 2.4em;
+  }
+
+  .content {
+    @extend .content;
+    margin: 1.2em auto;
+    .intro {
+      display: block;
+      padding-top: 1.2em;
+
+    }
+    h2{
+      //
+      color: $blue;
+      padding: 1.2em;
+      padding-top: 0;
+      padding-bottom: .2em;
+      margin-top: 0;
+      margin-bottom: 0;
+      font-size: 2.4em;
+      @include desktop{
+        color: #fff;
+      }
+    }
+  }
+}

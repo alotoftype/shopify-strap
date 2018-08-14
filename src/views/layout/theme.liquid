@@ -73,7 +73,8 @@
   {% comment %}
     Stylesheet :: Design
   {% endcomment %}
-  {{ 'stylesheet.css' | asset_url | stylesheet_tag }}
+
+ {{ 'stylesheet.css' | asset_url | stylesheet_tag }}
 
   {% comment %}
     Liquid :: Routing & Site Configuration
@@ -113,10 +114,40 @@
   {% comment %}
     Desktop :: Container
   {% endcomment %}
-  <div id="container" class="container-fluid">
+  <div id="container">
+
+
     <header role="banner" itemscope itemtype="http://schema.org/WPHeader">
-      {%- include 'layout.navigation' -%}
+      <div class="headerTop"><section id="promo_banner">
+            <div class="promo_banner_content">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+        </section>
+        {% include 'navigation.mobile_nav' %}
+        {% include 'navigation.nav' %}
+        </div>
+         <section id="search" class="hidden">
+                      <div class="content">
+                          <form action="" method="post">
+                              <input type="text" name="" id="">
+                              <button>submit</button>
+                          </form>
+                      </div>
+                  </section>
+     <section class="header_top">
+
+      {% comment %} {%- include 'layout.navigation' -%} {% endcomment %}
+      </section>
+
+      <section class ="main_message">
+          <div class="content">
+          <span class="intro is-hidden-tablet">hi, we’re roomify.
+</span>
+          <h2>we make outfitting your space easy.</h2>
+          </div>
+      </section>
     </header>
+
     <main role="main" itemscope itemprop="mainContentOfPage">
       {{ content_for_layout }}
     </main>
@@ -124,5 +155,20 @@
       {%- include 'layout.footer' -%}
     </footer>
   </div>
+  <script>
+  window.onscroll = () => myFunction();
+    let header = document.querySelector('.headerTop');
+
+    var sticky = header.offsetTop;
+
+     function myfunction(){
+        if(window.pageYOffset > sticky ){
+            header.classList.add('sticky');
+        }else {
+            header.classList.remove('sticky');
+        }
+    }
+
+  </script>
 </body>
 </html>

@@ -4,5 +4,18 @@
   Learn how to read theme settings in your theme.
 {% endcomment %}
 
-<h1>Empty</h1>
 {{ page.content }}
+
+{% include 'index.featuredProducts' %}
+<section class="homepage-featured__content">
+        <div class="homepage-featured__content-message">
+           <p>We’re here to eliminate all the guesswork and clutter and deliver everything you need to gsd. Now you’ll have more time and cash to spend doing more important things-like nothing at all.
+</p>
+<a class="button">Read More</a>
+        </div>
+    </section>
+{% include 'index.fullWidth' %}    
+{% include 'index.messageBox' %}
+{% include 'index.secondProducts' %}
+{% include 'layout.newsletter' %}
+{% include 'index.instagram' %} 

@@ -1,0 +1,21 @@
+@font-face {
+  font-family: "Sofia-Pro";
+  src: local("Sofia Pro Regular");
+  src: url('https://cdn.shopify.com/s/files/1/0019/0149/4316/files/Sofia-Pro-Bold.woff?18359548256612989723') format('woff'),
+       url('https://cdn.shopify.com/s/files/1/0019/0149/4316/files/Sofia-Pro-Regular.ttf?18359548256612989723') format('truetype'),
+       url('https://cdn.shopify.com/s/files/1/0019/0149/4316/files/Sofia-Pro-Regular.svg?18359548256612989723' ) format('svg');
+
+}
+
+@font-face {
+  font-family: "Frank-Ruhl";
+  src: local("FankRuhlLibre-Regular");
+  src: url('https://cdn.shopify.com/s/files/1/0019/0149/4316/files/FrankRuhlLibre-Regular.ttf?13739255429545688712') format('truetype');
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Frank-Ruhl";
+  src: local("FankRuhlLibre-Bold");
+  src: url('https://cdn.shopify.com/s/files/1/0019/0149/4316/files/FrankRuhlLibre-Bold.ttf?13739255429545688712') format('truetype');
+  font-weight: Bold;
+}
