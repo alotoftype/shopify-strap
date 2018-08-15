@@ -33,7 +33,7 @@ We currently use the Strap in production on [BRIXTOL TEXTILES](https://github.co
 Download or clone the repository and run `yarn` or `npm install` from the projects root directory.
 
 ## Setup
-Strap assumes you have some basic knoweldge of theme development with Shopify. Please ensure you've set everything up correctly before you begin building with the Strap and follow the build-flow when developing.
+Strap assumes you have some basic knowledge of theme development with Shopify. Please ensure you've set everything up correctly before you begin building with the Strap and follow the build-flow when developing.
 
 ### Upload Theme to Shopify
 Before you get started you will need to add a new theme to your store and upload the `theme.zip` file located in the root directory.
