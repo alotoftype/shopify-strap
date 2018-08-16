@@ -1,15 +1,16 @@
 .headerTop {
   @include desktop {
     position: relative;
-    top: 4em;
-    margin-top: -4em;
+    top: 7em;
+    margin-top: -6em;
   }
 }
 
 .header_top {
-  background: green;
+  background: url('https://cdn.shopify.com/s/files/1/0019/0149/4316/files/CASPER-19.jpg?12220869412334734762') center no-repeat;
+  background-size: cover;
   @include desktop {
-  height: 45em;
+  height: 58.8em;
   }
 @include until($desktop){
   height: 20em;
@@ -28,11 +29,15 @@
   @include desktop {
     position: absolute;
     margin: 2.4em auto;
-    width: 60%;
+    width: 100%;
     top: 20vh;
     text-align: center;
-    left: 25vw;
     padding: 2.4em;
+
+    a.button {
+      margin: 1.2em auto;
+  border-radius: 2.6em;
+    }
   }
 
   .content {
@@ -51,10 +56,11 @@
       padding-bottom: .2em;
       margin-top: 0;
       margin-bottom: 0;
-      font-size: 2.4em;
+      font-size: 4.8em;
       @include desktop{
         color: #fff;
       }
+
     }
   }
 }

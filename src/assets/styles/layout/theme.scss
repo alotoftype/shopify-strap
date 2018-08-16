@@ -8,7 +8,7 @@ html, body {
 }
 
 body {
-  font-size: 62.5%;
+  font-size: $font-size;
   font-family: $sofia;
   font-weight: 300;
   color: $body-color;
@@ -30,7 +30,6 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 #container {
-  font-size: 1.6em;
   max-width: 1440px;
   margin: 0 auto;
 }

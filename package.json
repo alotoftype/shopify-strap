@@ -37,6 +37,7 @@
     "inquirer": "^6.0.0",
     "lodash": "^4.17.10",
     "path": "^0.12.7",
+    "postcss-shopify-liquid-expander": "^0.0.5",
     "rollup": "^0.59.4",
     "rollup-plugin-buble": "^0.19.2",
     "rollup-plugin-commonjs": "^8.3.0",
@@ -180,7 +181,8 @@
       ],
       "dest": "./theme/assets/",
       "watch": [
-        "./src/assets/images/hero/*"
+        "./src/assets/images/hero/*",
+        "./src/assets/images/products/*"
       ]
     },
     "json": {

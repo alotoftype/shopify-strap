@@ -8,15 +8,28 @@
         @include desktop{
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            grid-gap: 1.2em;
+            grid-gap: .6em;
         }
       & .homepage-featured__product {
           @extend .column;
           display:flex;
           justify-content: center;
+          padding: 0;
+
+
 
       image {
-          width: 100%;
+        transition: .5s ease;
+        &:hover  {
+              opacity: 0.3;
+                }
+
+
+        @include desktop {
+            width: 328px;
+            height: 351px;
+        }
+
       }
       }
       .featured__product-info {
@@ -27,13 +40,34 @@
 
     .homepage-featured__second-products{
         @extend .columns;
-        padding: .6em 0;
-        .homepage-featured__second-product {
-        @extend .column;
+        padding: .6em;
 
-        .featured__product-info {
+        .homepage-featured__second-product {
+            @extend .column;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
+            align-items: flex-end;
+            height: 20em;
+            margin: .6em;
+
+            background: url('https://images.ctfassets.net/q602vtcuu3w3/5XmToQyhPOcymmCE6KW2Iy/506e1ddedf3a96e3bb30d4bee56fec7e/18-AUG-WK2_MGW_cs12.jpg') center;
+            background-size: cover;
+            @include desktop {
+            width: 30em;
+            height: 40em;
+            }
+
+
+        h3 {
+            font-size: 3.6em;
+            color: #fff;
+                border-bottom: 1px solid #fff;
+            @include until ($desktop){
+                font-size: 2.4em;
+                color: #fff;
+                border-bottom: 1px solid #fff;
+            }
         }
+
         }
     }

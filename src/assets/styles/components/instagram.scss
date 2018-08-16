@@ -3,14 +3,15 @@
      display: flex;
         @extend .columns;
         @extend .is-multiline;
-        justify-content: center;
+
         margin: .6em 0;
         .title {
             @extend .column;
-            @extend .is-8;
-            @extend .is-offset-4;
+            @extend .is-12;
             text-align: center;
             padding: 1.2em;
+            margin: 0 auto;
+
         }
         .title {
             overflow: hidden;
@@ -18,7 +19,6 @@
         .title h2 {
             display: block;
             position: relative;
-            width: fit-content;
         }
         .title:hover  h2:after {
             background: #fff;
@@ -29,7 +29,8 @@
             position: absolute;
             left: 0;
             top: 0;
-            width: 5.2em;
+            width: 100%;
+            text-align: center;
         }
 
         .homepage-instagram-container{
@@ -38,7 +39,7 @@
             margin: 1.2em 0;
             @include until ($desktop) {
                 grid-template-columns:  repeat(2, 1fr);
-                grid-gap: 1.2em;
+                grid-gap: .6em;
             }
 
             .homepage-instagram-photos{
@@ -51,9 +52,9 @@
                     padding: 1.2em;
                 }
                 @include desktop {
-                    height: 17.04em;
-                    width: 17.04em;
-                    margin: 1.2em;
+                    height: 31em;
+                    width: 30.5em;
+                    margin: 0 .6em;
                 }
 
 

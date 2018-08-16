@@ -6,7 +6,7 @@
         .message_box1, .message_box2 {
             @extend .column;
             text-align: center;
-            background: $red;
+            background: url('https://images.ctfassets.net/q602vtcuu3w3/4hmqTiwdOwyswgaSqoUumW/68bb16d433f0b00ba70108ec1b404cbc/wk2-mgw-3.jpg') center;
             box-sizing: content-box;
             display: flex;
             justify-content: center;
@@ -28,7 +28,7 @@
             }
             }
             @include desktop {
-                height: 35em;
+                height: 45em;
             }
             @include until($desktop) {
                 margin-bottom: 1.2em;
@@ -45,13 +45,13 @@
 
         .message_box1 {
         @include desktop {
-        margin-right: 1.2em;
+        margin-right: .6em;
         }
 
         }
         .message_box2 {
             @include desktop {
-                margin-left: 1.2em;
+                margin-left: .6em;
             }
 
 

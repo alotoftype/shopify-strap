@@ -30,6 +30,16 @@ nav{
   @media screen and (max-width: $desktop){
     display: none;
   }
+  li  {
+    a {
+      padding: 0 2.4em;
+      color: $blue;
+      font-family: $sofia;
+      font-weight: bold;
+      font-size: 1.6em;
+    }
+
+  }
 }
 
 #navMenu {

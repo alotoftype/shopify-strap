@@ -34,6 +34,7 @@ export default function (gulp, plugins, mode, sync) {
 					}
 				})
 			))
+			//.pipe(plugins.postcss([ require('postcss-shopify-liquid-expander')]))
 			.pipe(plugins.rename('stylesheet.css'))
 			.pipe(plugins.replace('"{{', '{{'))
 			.pipe(plugins.replace('}}"', '}}'))

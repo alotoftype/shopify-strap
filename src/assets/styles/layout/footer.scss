@@ -1,11 +1,15 @@
   footer {
     background: $light-grey;
     margin-top: .6em;
-    padding: 2.4em .6em;
+
+    @include desktop {
+        padding: 2.4em 3.2em;
+    }
     .footer {
         background: none;
     @include until ($desktop) {
         display: flex;
+        justify-content: center;
         flex-direction: column-reverse;
         padding: 0;
         padding-bottom: 6em;
@@ -13,12 +17,12 @@
         width: 100%;
     }
     @include desktop {
-        min-height: 34.6em;
+        min-height: 20.6em;
     }
     }
 
     .footer_links {
-        display: flex;
+        @extend .columns;
         @include until ($desktop) {
             margin: 0 .6em;
         }
