@@ -10,7 +10,7 @@
             box-sizing: content-box;
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-end;
             h3{
                 font-weight: bold;
                 color:#fff;
@@ -20,9 +20,10 @@
                 }
             }
             p {
-                border-bottom: solid 2px;
+                border-bottom: solid 2px $blue;
                 display: inline;
                 padding-bottom: 3px;
+                font-size: 1.6em;
             &::after {
                 content: " →";
             }

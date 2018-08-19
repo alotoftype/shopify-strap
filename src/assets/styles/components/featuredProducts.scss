@@ -58,15 +58,15 @@
             }
 
 
-        h3 {
-            font-size: 3.6em;
+        p {
             color: #fff;
-                border-bottom: 1px solid #fff;
-            @include until ($desktop){
-                font-size: 2.4em;
-                color: #fff;
-                border-bottom: 1px solid #fff;
-            }
+            border-bottom: solid 2px $blue;
+            display: inline;
+            padding-bottom: 3px;
+            font-size: 1.6em;
+        &::after {
+            content: " →";
+        }
         }
 
         }
