@@ -1,42 +1,33 @@
-   .homepage-full_width {
-        display: flex;
-        height: 41.5em;
-        background: #4d4d4d;
-        margin: .6em 0;
-        @include until ($desktop) {
-            flex-direction: column-reverse;
-        }
-        .hompage-full_width-message{
-            @include until ($desktop) {
-                background: #fff;
-            }
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            .full_width-message-content {
-                padding:2.4em;
-                text-align: center;
-                h2 {
-                    font-size: 4.6em;
-                    font-weight: bold;
-                    line-height: 1;
-                @include until ($desktop){
-                    font-size: 2.4em;
-                }
-                }
-                p {
-                    font-size: 1.8em;
-                    @include until ($desktop){
-                        font-size: 1em;
-                    }
-                }
-                .button {
-                    margin: 1.2em auto;
-                    border-radius: 2.6em;
-                }
-            }
+.homepage-full_width{
+    padding: 1.2em 0;
+    h2 {
+        text-align: center;
+        font-size: 2em;
+        padding: 1.2em;
+    }
+    .value_prop_container{
+        @extend .columns;
+        margin: 0;
 
-
+    .value_prop{
+        @extend .column;
+        background: url('https://via.placeholder.com/350x450') center;
+        text-align: center;
+        margin: 0 .3em;
+        margin-bottom: 1.2em;
+        .content {
+            h3 {
+                font-size: 2em;
+            }
+            @include desktop{
+                padding-top: 35em;
+            }
+            @include until ($desktop){
+                padding-top: 25em
+            }
 
         }
     }
+    }
+
+}
