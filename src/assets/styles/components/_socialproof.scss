@@ -1,0 +1,18 @@
+.socialProof {
+  @extend .columns;
+  padding: 1.2em;
+
+.social {
+  @extend .column;
+  padding: .3em;
+}
+
+}
+
+.description {
+  p {
+    text-align: center;
+    font-size: 1.8em;
+    font-weight: 100;
+  }
+}

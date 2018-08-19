@@ -18,7 +18,9 @@ body {
 h1,h2,h3,h4,h5,h6 {
   font-family: $frank;
 }
-
+i {
+  color: $blue;
+}
 .sticky {
   position: fixed !important;
   top: 0 !important;
