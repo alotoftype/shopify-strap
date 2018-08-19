@@ -73,7 +73,7 @@
   {% comment %}
     Stylesheet :: Design
   {% endcomment %}
-
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
  {{ 'stylesheet.css' | asset_url | stylesheet_tag }}
 
   {% comment %}
@@ -103,6 +103,7 @@
     JavaScript :: Main Scripts
   {% endcomment %}
   <script src="{{ 'bundle.js' | asset_url }}" defer></script>
+  
 </head>
 
 <body id="template_{{ template | strip }}" class="template_{{ template | strip }}" itemtype="http://schema.org/WebPage" itemscope>

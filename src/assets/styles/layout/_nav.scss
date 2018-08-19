@@ -6,6 +6,22 @@
     display: flex;
     align-items: center;
 }
+.nav__section2 {
+
+  ul:first-child {
+    padding: 0 2.4em;
+    display: block;
+     li {
+      color: #00188A;
+      font-family: "Sofia-Pro";
+      font-weight: bold;
+      font-size: 1.6em;
+    }
+  }
+  ul {
+    padding: 0 2.4em;
+  }
+}
 nav{
     display: flex;
     justify-content: space-between;
@@ -39,6 +55,12 @@ nav{
       font-size: 1.6em;
     }
 
+
+  }
+  .admin {
+    a {
+      padding: 0 .6em !important;
+    }
   }
 }
 
@@ -50,6 +72,12 @@ nav{
   padding:1.2em;
 
 
+  form {
+    display: flex;
+    justify-content: space-between;
+  }
+
+
   .main-menu li{
     padding: 1em;
     border-bottom: 1px solid $primary;
@@ -57,13 +85,13 @@ nav{
 }
 .mobile-contact{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
 
   ul {
     align-self: flex-end;
   }
   li {
-    padding: 0;
+    padding: 0 1.6em;
     border: none;
     display: inline-block;
   }
