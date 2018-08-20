@@ -67,14 +67,24 @@ nav{
 #navMenu {
   position: absolute;
   width: 100vw;
-  top:4.5em;
+  top:5em;
   left: 0;
   padding:1.2em;
 
 
   form {
+    border-bottom: 1px solid $blue;
     display: flex;
     justify-content: space-between;
+    .search-input {
+
+      width: 100%;
+    }
+
+    input, button {
+      background: none;
+      border: none;
+    }
   }
 
 
