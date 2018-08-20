@@ -1,92 +1,141 @@
   footer {
     background: $light-grey;
     margin-top: .6em;
+    padding: 1.2em;
 
-    @include desktop {
-        padding: 2.4em 3.2em;
-    }
+
     .footer {
         background: none;
+        background: none;
+        padding: 1.2em 0 !important;
     @include until ($desktop) {
-        display: flex;
-        justify-content: center;
-        flex-direction: column-reverse;
-        padding: 0;
-        padding-bottom: 6em;
-        margin: 0;
-        width: 100%;
+
     }
     @include desktop {
         min-height: 20.6em;
-    }
-    }
 
-    .footer_links {
+    }
+    }
+    .footer_content {
         @extend .columns;
-        @include until ($desktop) {
-            margin: 0 .6em;
-        }
-    }
-    .footer_signup {
-        //display: flex;
-        align-content: center;
-        justify-content: center;
 
-        h2, form{
-            width: 90%;
-            margin: 1.2em auto;
-        }
-        h2 {
-            text-align: center;
-        }
+        .footer_links {
+            @extend .is-three-quarters;
+            @extend .is-hidden-mobile;
+            @extend .column;
+            @extend .columns;
 
-        h3 {
-            font-size: 2.4em;
-            font-weight: bold;
-            line-height: 1;
-            @include until ($desktop){
-                padding: 0 2.2em;
-                padding-left: .6em;
-                text-align: left;
-            }
-        }
-
-        .has-addons {
-            .input, .button {
-                border: none;
-                background: none;
-                border-bottom: 2px solid $blue;
-                border-radius: 0;
-            }
-            .input {
-                box-shadow: none;
-                border-radius: 0;
+            .section {
+                padding-top: 0;
+                @extend .column;
+                h3 {
+                    font-size: 2.4em;
+                    font-weight: bold;
+                    padding-bottom: .5em;
+                }
+                li {
+                    font-size: 1.6em;
+                    padding: 1em 0;
+                }
 
             }
-            .button::after {
-                padding-left: .3em;
-                content: " →"
+        }
+
+        .footer_signup {
+            padding-top: 0;
+            @extend .column;
+            h3 {
+                font-size: 2.4em;
+                font-weight: bold;
+                line-height: 1;
+                @include until ($desktop){
+                    padding: 0 2.2em;
+                    padding-left: .6em;
+                    text-align: left;
+                }
+                @include desktop {
+                    padding-bottom: 1em;
+                }
             }
+
+            .has-addons {
+                .input, .button {
+                    border: none;
+                    background: none;
+                    border-bottom: 2px solid $blue;
+                    border-radius: 0;
+                }
+                .input {
+                    box-shadow: none;
+                    border-radius: 0;
+
+                }
+                .button::after {
+                    padding-left: .3em;
+                    content: " →"
+                }
+            }
+
         }
-
-    }
-    .social {
-        @extend .is-narrow-mobile;
-        display: flex;
-        justify-content: center;
-
-        @include desktop {
-        justify-content: flex-start;
-        li {
-           display: inline-block;
-
-            margin: 0 1.2em;
-
+        .social {
+            @extend .is-hidden-mobile;
+            @include desktop {
+            li {
+               display: inline-block;
+                margin: 1.2em;
+            }
+           li:first-child {
+               margin-left: 0;
+           }
         }
-
-       li:first-child {
-           margin-left: 0;
        }
+       .mobile_footer{
+        @extend .is-hidden-desktop;
+        @extend .is-flex-mobile;
+        @extend .column;
+        @extend .columns;
+
+        .section {
+            @extend .column;
+
+            li {
+                padding-bottom: 1em;
+               a {
+                   font-size: 1.6em;
+                   color: $blue;
+                :visited, :hover {
+                    color: $blue;
+                }
+               }
+            }
+        }
     }
-   }
+    .mobile_social {
+        @extend .is-hidden-desktop;
+        ul {
+            margin: 0 auto;
+            width: 90%;
+        }
+        li {
+
+            display: inline-block;
+            padding: 0 1.2em;
+            padding-bottom: 1em;
+           a {
+               font-size: 1.6em;
+               color: $blue;
+            :visited, :hover {
+                color: $blue;
+            }
+           }
+        }
+    }
+    }
+
+
+    .copyright {
+        text-align: center;
+        padding: 1.2em;
+    }
+
   }
