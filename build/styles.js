@@ -4,13 +4,15 @@ import {
 } from './../package.json';
 
 import colors from 'colors';
+import sourcemaps from 'gulp-sourcemaps';
 
 export default function (gulp, plugins, mode, sync) {
 	return () => {
 		gulp
 			.src(config.styles.src)
+			.pipe(sourcemaps.init())
 			.pipe(plugins.sass({
-				outputStyle: 'uncompressed',
+				outputStyle: 'compressed',
 				includePaths: config.styles.include
 			}).on('error', plugins.sass.logError))
 			.pipe(mode.production(
@@ -43,6 +45,7 @@ export default function (gulp, plugins, mode, sync) {
 					return colors['magenta'](colors.bold(`💈 Stylesheet Compiled`))
 				})
 			))
+			.pipe(sourcemaps.write())
 			.pipe(gulp.dest(config.styles.dest))
 			.pipe(mode.production(
 				plugins.print.default(filename => {
