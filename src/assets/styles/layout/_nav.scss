@@ -57,6 +57,17 @@ nav{
 
 
   }
+  .has-dropdown {
+    ul{
+      display: none;
+    }
+    &:hover {
+      ul {
+        display: block;
+        position: absolute;
+      }
+    }
+  }
   .admin {
     a {
       padding: 0 .6em !important;
