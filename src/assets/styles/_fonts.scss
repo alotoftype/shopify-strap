@@ -4,9 +4,7 @@
   src: url('https://cdn.shopify.com/s/files/1/0019/0149/4316/files/Sofia-Pro-Bold.woff?18359548256612989723') format('woff'),
        url('https://cdn.shopify.com/s/files/1/0019/0149/4316/files/Sofia-Pro-Regular.ttf?18359548256612989723') format('truetype'),
        url('https://cdn.shopify.com/s/files/1/0019/0149/4316/files/Sofia-Pro-Regular.svg?18359548256612989723' ) format('svg');
-
 }
-
 @font-face {
   font-family: "Frank-Ruhl";
   src: local("FankRuhlLibre-Regular");
@@ -16,6 +14,51 @@
 @font-face {
   font-family: "Frank-Ruhl";
   src: local("FankRuhlLibre-Bold");
-  src: url('https://cdn.shopify.com/s/files/1/0019/0149/4316/files/FrankRuhlLibre-Bold.ttf?13739255429545688712') format('truetype');
+  src: url('https://cdn.shopify.com/s/files/1/0019/0149/4316/files/FrankRuhlLibre-Bold.ttf?13739255429545688712') format('truetype'),
+  url('https://cdn.shopify.com/s/files/1/1654/5371/files/frankruhllibre-bold-webfont.woff?9027243523160578030') format('woff'),
+  url('https://cdn.shopify.com/s/files/1/1654/5371/files/frankruhllibre-bold-webfont.woff2?9027243523160578030') format('woff2');
   font-weight: Bold;
+}
+@font-face { 
+  font-family: "Frank-Ruhl";
+  src: local("FrankRhulLibre-Regular");
+  src: url('https://cdn.shopify.com/s/files/1/1654/5371/files/frankruhllibre-regular-webfont.woff?9027243523160578030') format('woff');
+  font-weight: normal;
+}
+@font-face { 
+  font-family: "Frank-Ruhl";
+  src: local("FrankRhulLibre-medium");
+  src: url('https://cdn.shopify.com/s/files/1/1654/5371/files/frankruhllibre-medium-webfont.woff?9027243523160578030') format('woff');
+  font-weight: 600;
+}
+@font-face { 
+  font-family: "Frank-Ruhl";
+  src: local("FrankRhulLibre-Black");
+  src: url('https://cdn.shopify.com/s/files/1/1654/5371/files/frankruhllibre-black-webfont.woff?9027243523160578030') format('woff'),
+  url('https://cdn.shopify.com/s/files/1/1654/5371/files/frankruhllibre-black-webfont.woff2?9027243523160578030') format('woff2');
+  font-weight: bolder;
+}
+
+@font-face {
+  font-family: "Kollektif";
+  src: local('Kollektif Regular');
+  src: url('https://cdn.shopify.com/s/files/1/1654/5371/files/kollektif-webfont.woff?9027243523160578030') format('woff'),
+  url('https://cdn.shopify.com/s/files/1/1654/5371/files/kollektif-webfont.woff2?9027243523160578030') format('woff2');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Kollektif";
+  src: local('Kollektif Italic');
+  src: url('https://cdn.shopify.com/s/files/1/1654/5371/files/kollektif-italic-webfont.woff?9027243523160578030') format('woff'),
+  url('https://cdn.shopify.com/s/files/1/1654/5371/files/kollektif-italic-webfont.woff2?9027243523160578030') format('woff2');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Kollektif";
+  src: local('Kollektif bold');
+  src: url('https://cdn.shopify.com/s/files/1/1654/5371/files/kollektif-bold-webfont.woff?9027243523160578030') format('woff'),
+  url('https://cdn.shopify.com/s/files/1/1654/5371/files/kollektif-bold-webfont.woff2?9027243523160578030') format('woff2');
+  font-weight: bold;
 }
