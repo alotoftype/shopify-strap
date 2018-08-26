@@ -37,6 +37,10 @@
     a.button {
       margin: 1.2em auto;
   border-radius: 2.6em;
+      &:hover{
+        background: $blue;
+        color: #fff;
+      }
     }
   }
 

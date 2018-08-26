@@ -1,5 +1,6 @@
 /* Components */
 import 'components/nav';
+import 'components/carousel'
 import App from 'components/app';
 //import Locale from 'components/locale';
 import AjaxCart from 'components/ajax-cart';

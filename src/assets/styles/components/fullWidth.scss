@@ -1,5 +1,6 @@
 .homepage-full_width{
     padding: 1.2em 0;
+    margin-bottom: 0;
     h2 {
         text-align: center;
         font-size: 2em;
@@ -7,27 +8,46 @@
     }
     .value_prop_container{
         @extend .columns;
-        margin: 0;
+        width: 80%;
+        margin: 0 auto;
 
     .value_prop{
         @extend .column;
         background: url('https://via.placeholder.com/350x450') center;
+        background-size: cover;
         text-align: center;
-        margin: 0 .3em;
-        margin-bottom: 1.2em;
+        margin: 0 .6em;
+        margin-bottom: 0;
         .content {
             h3 {
                 font-size: 2em;
             }
-            @include desktop{
-                padding-top: 35em;
-            }
-            @include until ($desktop){
+                padding-top: 45em;
+                padding-left: 3.2em;
+                padding-right: 3.2em;
+            
+            @include until ($tablet){
                 padding-top: 25em
             }
+            
 
         }
     }
     }
+    .cta {
+        display: flex;
+        justify-content: center;
+
+        a.button {
+            margin: 1.2em auto;
+            border-radius: 2.6em;
+            text-align: center;
+            &:hover{
+                background: $blue;
+                color: #fff;
+            }
+        }
+    }
+   
 
 }
