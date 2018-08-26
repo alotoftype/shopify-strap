@@ -1,6 +1,7 @@
 #promo_banner {
   width: 100%;
   min-height: 1em;
+  padding: 1.2em 2.4em;
   color: green;
 
   .promo_banner_content{
@@ -11,7 +12,7 @@
        font-size: 1.2em;
 
      }
-     @include until($desktop){
+     @include until($tablet){
        font-size:.9em;
      }
 

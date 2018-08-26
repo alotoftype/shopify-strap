@@ -13,10 +13,17 @@ $(document).ready(function() {
 
   $(window).scroll(function(){
     var sticky = $('.headerTop'),
+        promo = $('#promo_banner'),
         scroll = $(window).scrollTop();
 
-    if (scroll >= 100) sticky.addClass('sticky');
-    else sticky.removeClass('sticky');
+    if (scroll >= 100) {
+      sticky.addClass('sticky');
+      promo.addClass('hidden');
+    }
+    else {
+      sticky.removeClass('sticky');
+      promo.removeClass('hidden');
+    }
   });
 
   $('.search').click((e)=> {
