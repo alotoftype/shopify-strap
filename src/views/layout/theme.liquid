@@ -115,9 +115,7 @@
   {% comment %}
     Desktop :: Container
   {% endcomment %}
-  <div id="container">
-
-
+  <div id="header-container">
     <header role="banner" itemscope itemtype="http://schema.org/WPHeader">
       <div class="headerTop"><section id="promo_banner">
             <div class="promo_banner_content">
@@ -149,10 +147,12 @@
           </div>
       </section>
     </header>
-
+</div>
+<div class="body-container">
     <main role="main" itemscope itemprop="mainContentOfPage">
       {{ content_for_layout }}
     </main>
+    </div>
     <footer itemscope itemtype="http://schema.org/WPFooter">
       {%- include 'layout.footer' -%}
     <section class="copyright">

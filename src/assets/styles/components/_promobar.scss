@@ -9,7 +9,7 @@
   .promo_banner_content{
      @extend .column;
      padding: 0;
-     width: 60%;
+     width: 100%;
      margin: 0 auto;
      text-align: center;
      @include desktop {

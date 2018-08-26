@@ -10,7 +10,7 @@
   background: url('https://cdn.shopify.com/s/files/1/0019/0149/4316/files/CASPER-19.jpg?12220869412334734762') center no-repeat;
   background-size: cover;
   @include desktop {
-  height: 58.8em;
+  height: 65.8em;
   }
 @include until($desktop){
   height: 20em;
