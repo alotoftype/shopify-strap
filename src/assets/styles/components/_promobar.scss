@@ -1,16 +1,11 @@
 #promo_banner {
-  @extend .columns;
-  width: 90%;
+  width: 100%;
   min-height: 1em;
-  margin: 1.2em;
   color: green;
-  justify-content: center;
 
   .promo_banner_content{
-     @extend .column;
      padding: 0;
      width: 100%;
-     margin: 0 auto;
      text-align: center;
      @include desktop {
        font-size: 1.2em;
