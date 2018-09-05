@@ -4,15 +4,15 @@
   <meta charset="UTF-8">
   <title>
     {{ page_title }}
-    {% if current_tags %}
-    {% assign meta_tags = current_tags | join: ', ' %} &ndash; {{ 'general.meta.tags' | t: tags: meta_tags }}
-    {% endif %}
-    {% if current_page != 1 %}
+    {%- if current_tags -%}
+    {%- assign meta_tags = current_tags | join: ', ' -%} &ndash; {{ 'general.meta.tags' | t: tags: meta_tags }}
+    {%- endif -%}
+    {%- if current_page != 1 -%}
     &ndash; {{ 'general.meta.page' | t: page: current_page }}
-    {% endif %}
-    {% unless page_title contains shop.name %}
+    {%- endif -%}
+    {%- unless page_title contains shop.name -%}
     &ndash; {{ shop.name }}
-    {% endunless %}
+    {%- endunless -%}
   </title>
 
   {% comment %}
@@ -47,11 +47,7 @@
   {% comment %}
     Favicons :: Modern Supported Browser & Device Favicons
   {% endcomment %}
-  <link rel="apple-touch-icon" sizes="180x180" href="{{ 'apple-touch-icon.png' | asset_url }}">
-  <link rel="icon" type="image/png" sizes="32x32" href="{{ 'favicon-32x32.png' | asset_url }}">
-  <link rel="icon" type="image/png" sizes="16x16" href="{{ 'favicon-16x16.png' | asset_url }}">
-  <link rel="mask-icon" href="{{ 'safari-pinned-tab.svg' | asset_url }}" color="#3b3b3b">
-  <link rel="shortcut icon" href="{{ 'favicon.ico' | asset_url }}}">
+  {% include 'layout.favicons'%}
 
   {% comment %}
     Mobile :: Responsive Optimizations
@@ -73,7 +69,7 @@
   {% comment %}
     Stylesheet :: Design
   {% endcomment %}
-  {{ 'stylesheet.css' | asset_url | stylesheet_tag }}
+  {{ 'stylesheet.scss.liquid' | asset_url | stylesheet_tag }}
 
   {% comment %}
     Liquid :: Routing & Site Configuration
@@ -109,6 +105,9 @@
   {% comment %}
     Icons :: SVG Sprite
   {% endcomment %}
+  <div id="tl-icons" data-turbolinks-permanent>
+  {%- section 'icons' -%}
+  </div>
 
   {% comment %}
     Desktop :: Container
@@ -124,5 +123,6 @@
       {%- include 'layout.footer' -%}
     </footer>
   </div>
+
 </body>
 </html>

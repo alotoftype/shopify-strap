@@ -6,25 +6,27 @@ import svgSprite from 'gulp-svg-sprite';
 import colors from 'colors';
 
 export default (gulp, plugins, mode) => {
-  const svgConfig = {
-    mode: {
-      symbol: {
-        dest: config.icons.dest,
-        sprite: 'icons.liquid',
-        example: false // Build sample page
-      }
-    },
-    svg: {
-      xmlDeclaration: false,
-      doctypeDeclaration: false // don't include the !DOCTYPE declaration
-    }
-  };
-  return () => {
-    gulp
-      .src(config.icons.src)
-      .pipe(svgSprite(svgConfig))
-      .pipe(mode.development(
-				plugins.print.default(filename => {
+
+	const svgConfig = {
+		mode: {
+			symbol: {
+				dest: config.icons.dest,
+				sprite: 'icons.liquid',
+				example: false // Build sample page
+			}
+		},
+		svg: {
+			xmlDeclaration: false,
+			doctypeDeclaration: false // don't include the !DOCTYPE declaration
+		}
+	};
+
+	return () => {
+		gulp
+			.src(config.icons.src)
+			.pipe(svgSprite(svgConfig))
+			.pipe(mode.development(
+				plugins.print.default(() => {
 					return colors['magenta'](colors.bold(`🎀  Icons Compiled`))
 				})
 			))
@@ -32,11 +34,11 @@ export default (gulp, plugins, mode) => {
 				plugins.print.default(filename => {
 					return colors['yellow'](`🎀  icons:`) + colors['magenta'](` ${filename}`)
 				})
-      ))
-      .pipe(plugins.size({
+			))
+			.pipe(plugins.size({
 				title: `🎀 `,
 				gzip: false,
 			}))
-      .pipe(gulp.dest('.'));
-  };
+			.pipe(gulp.dest('.'));
+	};
 }
