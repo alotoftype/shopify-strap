@@ -5,21 +5,47 @@
             <div class="overlay"></div>
             <div class="featured__product-info">
                 <div class="featured__product-title">
-                    <span>Product 1</span>
+                    <span class="product_name">Product 1</span>
                 </div>
-                <span>$35.00</span>
+                <span class="price" >$35.00</span>
             </div>
         </div>
     </div>
     <div class="homepage-featured__product">
         <div class="featured__product-content">
-           {{ '18_purple.jpg' | asset_url | img_tag}}
+           {{ '18_purple.jpg' | asset_url | img_tag }}
             <div class="overlay"></div>
             <div class="featured__product-info">
                 <div class="featured__product-title">
-                    <span>Product 1</span>
+                    <span class="product_name">Product 2</span>
                 </div>
-                <span>$35.00</span>
+                <span class="price">$35.00</span>
+            </div>
+            {% comment %} <div class="featured__colorOptions"> 
+            <button><i class="fas fa-circle"></i></button>
+            <button><i class="fas fa-circle"></i></button>
+            <button><i class="fas fa-circle"></i></button>
+            <button><i class="fas fa-circle"></i></button>
+            </div> {% endcomment %}
+            {% comment %} <div class="featured_addToCart">
+            <div class="size_container">
+            <span>twin</span>
+            <span>full</span>
+            <span>queen</span>
+            <span>king</span>
+            </div>
+            <a href="" class="add_to_cart_button">Add to Cart</a>
+            </div> {% endcomment %}
+        </div></div>
+    <div class="homepage-featured__product">
+        <div class="featured__product-content">
+            {{ '18_purple.jpg' | asset_url | img_tag}}
+            <div class="overlay"></div>
+            <div class="featured__product-info">
+                <div class="featured__product-title">
+                    <span class="product_name">Product 1</span>
+                </div>
+                <span class="price">$35.00</span>
             </div>
         </div></div>
     <div class="homepage-featured__product">
@@ -28,20 +54,9 @@
             <div class="overlay"></div>
             <div class="featured__product-info">
                 <div class="featured__product-title">
-                    <span>Product 1</span>
+                    <span class="product_name">Product 1</span>
                 </div>
-                <span>$35.00</span>
-            </div>
-        </div></div>
-    <div class="homepage-featured__product">
-        <div class="featured__product-content">
-            {{ '18_purple.jpg' | asset_url | img_tag}}
-            <div class="overlay"></div>
-            <div class="featured__product-info">
-                <div class="featured__product-title">
-                    <span>Product 1</span>
-                </div>
-                <span>$35.00</span>
+                <span class="price">$35.00</span>
             </div>
         </div></div>
 </section>

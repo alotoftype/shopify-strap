@@ -8,8 +8,12 @@
     }
     .value_prop_container{
         @extend .columns;
-        width: 80%;
+        width: 90%;
         margin: 0 auto;
+        @include until ($tablet){
+        width:98%;
+        margin: 0 auto;
+        }
 
     .value_prop{
         @extend .column;
@@ -18,20 +22,48 @@
         text-align: center;
         margin: 0 .6em;
         margin-bottom: 0;
+        @include until ($tablet){
+            margin-bottom: 1.2em;
+            margin-left: .3em;
+            margin-right:.3em;
+        }
         .content {
             h3 {
                 font-size: 2em;
             }
+            p{
+                font-weight: bold;
+            }
+            @include desktop {
                 padding-top: 45em;
+            }
+            @include  until ($desktop) {
+                padding-top: 35em;
+            }
                 padding-left: 3.2em;
                 padding-right: 3.2em;
             
             @include until ($tablet){
-                padding-top: 25em
+                padding-top: 10em;
+                
             }
             
-
+            .title, .message {
+                display: block;
+                color: #fff;
+            }
+            .title {
+                font-size: 2em;
+                margin-bottom: .6em;
+                
+                
+            }
+            .message{
+                font-size: 1.6em;
+                background: none;
+            }
         }
+       
     }
     }
     .cta {
@@ -42,9 +74,16 @@
             margin: 1.2em auto;
             border-radius: 2.6em;
             text-align: center;
-            &:hover{
-                background: $blue;
+            color:#fff;
+            background: $blue;
+            font-weight: bold;
+            font-size: 1.6em;
+            &:active, &:hover{
+                background: $body-color;
                 color: #fff;
+            }
+            @include desktop{
+                padding: 1.5em 2.5em;;
             }
         }
     }

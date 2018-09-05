@@ -40,6 +40,10 @@ i {
 
 main {
   margin: 1.2em 3.2em;
+  max-width: 1440px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 3.2em;
   @include until ($desktop) {
     //padding: 0 .6em;
     margin: .6em auto;

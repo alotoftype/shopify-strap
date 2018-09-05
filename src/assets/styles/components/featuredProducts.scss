@@ -1,9 +1,14 @@
   .homepage-featured__products {
         margin: .6em 0;
-        @include until($desktop) {
+        @include until($tablet) {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-gap: .6em;
+        }
+        @include tablet {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: .6em;     
         }
         @include desktop{
             display: grid;
@@ -32,18 +37,99 @@
 
       }
       }
-      .featured__product-info {
+      .featured__product-info { 
           display: flex;
           justify-content: space-between;
+          font-size: 1.6em;
+      }
+      .featured__colorOptions{
+          margin-top: .6em;
+          button{
+              padding: .5em 1em;
+              height: 30px;
+              width: 30px;
+              //margin:.6em;
+              font-size: 1.6em;
+              //background: blue;
+              border-radius: 50%;
+              border: none;
+            &:hover {
+                border: 1px solid $grey;
+                padding: .5em 1em;
+                border-radius: 50%;
+            }
+           &:first-child{
+               //margin-left: 0;
+           }   
+          }
+      }
+
+      .featured_addToCart {
+          background: lightgrey;
+          height: 15em;
+          position: relative;
+          z-index: 20;
+          bottom: 21.3em;
+          border:none;
+
+          .size_container{
+            padding: 1em;
+            padding-top: 0;
+            margin: .6em auto;
+            margin-top: .3em;
+            position: relative;
+            top: 23px;
+            display: flex;
+            justify-content: space-evenly;
+            width: 90%;
+              span {
+                  font-size: 1.6em;
+                  @include desktop {
+                      margin: .3em;
+                      margin-top: 0;
+                      padding: .3em;
+                      background: lightgrey;
+                      &:hover{
+                         border-bottom: 3px solid $blue;
+                         padding-bottom: .1em;
+                      }
+                  }
+              }
+             
+          }
+          .add_to_cart_button {
+            display: block ;
+            width: 50%;
+            margin: 1em auto;
+            text-align: center;
+            font-size: 1.6em;
+            color: #fff;
+            padding: .6em .5em;
+            background: $blue;
+            position: relative;
+            border-radius: 20px;
+            top: .3em;
+            &:hover {
+                background: #fff;
+                color: $blue;
+            }
+        }
+
+      }
+
+      .product_name {
+          font-weight: bold;
       }
     }
 
     .homepage-featured__second-products{
         @extend .columns;
-        padding: .6em;
+        padding: .3em;
+        margin-bottom: 0 !important;
 
         .homepage-featured__second-product {
             @extend .column;
+            
             display: flex;
             justify-content: center;
             align-items: flex-end;
@@ -65,7 +151,9 @@
             padding-bottom: 3px;
             font-size: 1.6em;
         &::after {
-            content: " →";
+            font-family: "Fontawesome";
+            margin-left: .3em;
+            content: "\f061";
         }
         }
 

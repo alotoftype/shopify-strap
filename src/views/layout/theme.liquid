@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-GB">
 <head>
   <meta charset="UTF-8">
@@ -73,7 +73,9 @@
   {% comment %}
     Stylesheet :: Design
   {% endcomment %}
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha256-UhQQ4fxEeABh4JrcmAJ1+16id/1dnlOEVCFOxDef9Lw=" crossorigin="anonymous" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha256-nXBV7Gr2lU0t+AwKsnS05DYtzZ81oYTXS6kj7LBQHfM=" crossorigin="anonymous" />
  {{ 'stylesheet.css' | asset_url | stylesheet_tag }}
 
   {% comment %}
@@ -120,7 +122,7 @@
       <div class="headerTop">
       <section id="promo_banner">
             <div class="promo_banner_content">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                <p>Free shipping on all bundles + orders over $75!</p>
             </div>
         </section>
         {% include 'navigation.mobile_nav' %}
@@ -141,10 +143,9 @@
 
       <section class ="main_message">
           <div class="content">
-          <span class="intro is-hidden-tablet">hi, we’re roomify.
-</span>
+          
           <h2>we make outfitting your space easy.</h2>
-            <a href="Shop" class="button">Shop dorm bundles</a>
+            <a href="Shop" class="button"> dorm bundles</a>
           </div>
       </section>
     </header>
@@ -161,20 +162,31 @@
     </section>
     </footer>
   </div>
-  <script>
-  window.onscroll = () => myFunction();
-    let header = document.querySelector('.headerTop');
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+  crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha256-pTxD+DSzIwmwhOqTFN+DB+nHjO4iAsbgfyFq5K5bcE0=" crossorigin="anonymous"></script>
 
-    var sticky = header.offsetTop;
-
-     function myfunction(){
-        if(window.pageYOffset > sticky ){
-            header.classList.add('sticky');
-        }else {
-            header.classList.remove('sticky');
-        }
+<script>
+$(document).ready(function(){
+  $(".owl-carousel").owlCarousel({
+    loop: true,
+    margin: 6,
+    nav: true,
+    responsive: {
+      0: {
+        items: 2
+      },
+      768: {
+        items: 3
+      },
+      1280: {
+        items: 5
+      }
     }
-
-  </script>
+  });
+});
+</script>
 </body>
 </html>

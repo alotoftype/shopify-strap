@@ -1,4 +1,4 @@
-import $ from 'jquery'
+//import $ from 'jquery'
 
 $(document).ready(function() {
 
@@ -25,14 +25,10 @@ $(document).ready(function() {
       promo.removeClass('hidden');
     }
   });
-
-  $('.search').click((e)=> {
-    $('#search').toggle().animate({
-      top: "2.8em",
-      height: "10em"},"fast", "linear", () => {
-        $(this).css('z-index', 20)
-      });
-      e.preventDefault();
+  $('#desktop-nav li').hover(
+    function() {
+      $('#desktop-nav').css("background-color", "white");
+      console.log('this was hovered');
+    });
     //console.log('search button was clicked');
-  });
-});
+}); 

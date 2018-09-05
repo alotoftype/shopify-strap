@@ -49,7 +49,12 @@
                             <li>about</li>
                           </ul>
                             <ul class="nav admin">
-                                    <li><a href="#" class="search"><i class="fas fa-search"></i></a></li>
+                                    <li>
+                                    <form action="/search" method="get" class="search-bar" role="search">
+    <a href="#" class="search"><i class="fas fa-search"></i></a>
+    <input class="search-form__input" placeholder="Search" type="text" value="{{ search.terms | escape }}" name="q">
+</form>
+                                    </li>
                                     <li><a href="#"> <i class="fas fa-user"></i> </a></li>
                                     <li><a href="#"><i class="fas fa-shopping-bag"></i></a></li>
                                 </ul>

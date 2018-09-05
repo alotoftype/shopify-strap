@@ -88,9 +88,14 @@
                margin-left: 0;
            }
         }
+        li {
+            display: inline-block;
+            margin: .6em;
+        }
        }
        .mobile_footer{
         @extend .is-hidden-desktop;
+        @extend .is-hidden-tablet;
         @extend .is-flex-mobile;
         @extend .column;
         @extend .columns;
@@ -112,6 +117,7 @@
     }
     .mobile_social {
         @extend .is-hidden-desktop;
+        @extend .is-hidden-tablet;
         ul {
             margin: 0 auto;
             width: 90%;

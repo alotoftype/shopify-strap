@@ -1,7 +1,10 @@
     .message_box {
         @extend .columns;
-        margin: .6em 0;
+        margin: .6em;
         color: #fff;
+        @include tablet {
+            margin: 0;
+        }
 
         .message_box1, .message_box2 {
             @extend .column;
@@ -11,6 +14,7 @@
             display: flex;
             justify-content: center;
             align-items: flex-end;
+            height: 45em;
             h3{
                 font-weight: bold;
                 color:#fff;
@@ -24,14 +28,27 @@
                 display: inline;
                 padding-bottom: 3px;
                 font-size: 1.6em;
+                &:hover {
+                     color: $blue;
+                     border-bottom: solid 2px #fff;
+                }
             &::after {
-                content: " →";
+                font-family: "Fontawesome";
+                margin-left: .3em;
+                content: "\f061";
             }
+            }
+            @include tablet {
+                height: 25em;
+                margin: .6em;
+                padding: .3em;
+
             }
             @include desktop {
                 height: 45em;
             }
-            @include until($desktop) {
+           
+            @include until($tablet) {
                 margin-bottom: 1.2em;
                 height: 35em;
 
@@ -48,11 +65,18 @@
         @include desktop {
         margin-right: .6em;
         }
+        @include tablet {
+            margin-left: 0;
+        }
 
         }
         .message_box2 {
             @include desktop {
                 margin-left: .6em;
+                
+            }
+            @include tablet {
+                margin-right: 0;
             }
 
 

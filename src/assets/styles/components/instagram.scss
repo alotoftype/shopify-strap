@@ -6,20 +6,18 @@
         }
 
         .homepage-instagram-container{
-            @extend .columns;
+           
             .homepage-instagram-photos{
-                @extend .column;
                 background: #4d4d4d url('http://via.placeholder.com/350x350') center;
 
-                @include until ($desktop) {
-                    width:100%;
+                @include until ($tablet) {
+
                     height: 35em;
                     margin-bottom: 1.2em;
                 }
+
                 @include desktop {
                     height: 31em;
-                    width: 30.5em;
-                    margin: 0 .6em;
                 }
 
 

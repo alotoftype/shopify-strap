@@ -13,7 +13,8 @@
   height: 65.8em;
   }
 @include until($desktop){
-  height: 20em;
+  height: 30em;
+  margin-top: -6em;
 }
 
 
@@ -36,14 +37,36 @@
 
     a.button {
       margin: 1.2em auto;
-  border-radius: 2.6em;
+      padding: 1em 2em;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      font-size: 1.6em;
+      font-weight: bold;
+      color: $blue;
+      border: none;
+      border-radius: 2.6em;
       &:hover{
         background: $blue;
         color: #fff;
+        
       }
     }
   }
-
+  @include until ($desktop){
+    position: absolute;
+    margin: 2.4em auto;
+    top:12em;
+    a.button {
+      border-radius: 2.6em;
+      color:$blue;
+      font-weight: bold;
+      border: none;
+      &:hover{
+        background: $blue;
+        color: #fff;
+    }
+  }
+  }
   .content {
     margin: 1.2em auto;
     .intro {
@@ -59,9 +82,11 @@
       padding-bottom: .2em;
       margin-top: 0;
       margin-bottom: 0;
-      font-size: 4.8em;
+      font-size: 3.2em;
+      font-weight: bolder;
       @include desktop {
         color: #fff;
+        font-size: 4.8em;
       }
 
     }

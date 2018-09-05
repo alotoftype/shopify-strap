@@ -2,6 +2,20 @@
   background: transparent;
 }
 
+.search-form__input {
+  position: absolute;
+  top: 1.7em;
+  right: .7em;
+  padding: .6em;
+  //display: none;
+}
+
+.slide_out {
+  transform: 3s;
+  right: 13.7em;
+  display: inline-block;
+}
+
 .nav__section1, .navbar-brand, .nav__section2 {
     display: flex;
     align-items: center;
